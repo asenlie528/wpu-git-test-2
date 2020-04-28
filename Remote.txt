@@ -50,3 +50,51 @@ remote: Resolving deltas: 100% (1/1), done.
 To https://github.com/asenlie528/wpu-git-test-2.git
  * [new branch]      master -> master
 Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+===================================================
+Kalau ada yang sama / double menambahkan file yang sama. Baik di Github maupun di Git
+---------------------------------------------------
+
+LENOVO@LENOVO-PC MINGW64 /d/wpu-git-test-2 (master)
+$ git add .
+
+LENOVO@LENOVO-PC MINGW64 /d/wpu-git-test-2 (master)
+$ git commit -m "Menambahkan file style.css"
+[master 093b3bd] Menambahkan file style.css
+ 1 file changed, 3 insertions(+)
+ create mode 100644 style.css
+
+LENOVO@LENOVO-PC MINGW64 /d/wpu-git-test-2 (master)
+$ git push
+To https://github.com/asenlie528/wpu-git-test-2.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/asenlie528/wpu-git-test-2.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+
+
+============== Cek dulu ===============
+LENOVO@LENOVO-PC MINGW64 /d/wpu-git-test-2 (master)
+$ git fetch
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 737 bytes | 4.00 KiB/s, done.
+From https://github.com/asenlie528/wpu-git-test-2
+   e84ac0e..dfb82b2  master     -> origin/master
+
+
+LENOVO@LENOVO-PC MINGW64 /d/wpu-git-test-2 (master)
+$ git status
+On branch master
+Your branch and 'origin/master' have diverged,
+and have 1 and 1 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+
+
