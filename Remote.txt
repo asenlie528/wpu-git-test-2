@@ -98,3 +98,23 @@ and have 1 and 1 different commits each, respectively.
 
 
 
+LENOVO@LENOVO-PC MINGW64 /d/wpu-git-test-2 (master)
+$ graph
+* 093b3bd (HEAD -> master) Menambahkan file style.css
+| * dfb82b2 (origin/master) Menambahkan file style.css
+|/
+* e84ac0e Revisi file index.php
+* 3709ee5 Revisi file Remote.txt
+* fac71f8 Revisi file index.php
+* f85e425 Tambah file index.php
+
+
+
+LENOVO@LENOVO-PC MINGW64 /d/wpu-git-test-2 (master)
+$ git pull
+CONFLICT (add/add): Merge conflict in style.css
+Auto-merging style.css
+Automatic merge failed; fix conflicts and then commit the result.
+
+
+
